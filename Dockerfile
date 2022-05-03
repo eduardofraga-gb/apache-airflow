@@ -6,7 +6,7 @@ RUN apt update && apt -y install build-essential gcc unixodbc-dev
 
 USER airflow
 
-ADD requirements/requirements.txt .
+ADD requirements/requirements.txt requirements.txt 
 
 RUN /usr/local/bin/python -m pip install --upgrade pip \
     && /usr/local/bin/python -m pip install -r requirements.txt
